@@ -38,8 +38,8 @@ moduledir '3rdparty'
 
 moduledir 'acme'
 
-# repository etc.
-mod "acme_puppet_base", 
-  :git => "https://git.example.com/acme_puppet_base.git", 
-  :ref => "development" 
+## repository etc.
+#mod "acme_puppet_base", 
+#  :git => "https://git.example.com/acme_puppet_base.git", 
+#  :ref => "development" 
 
