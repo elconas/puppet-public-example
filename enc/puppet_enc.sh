@@ -14,7 +14,7 @@ LOG_TAG="PUPPET_CODE_PIPELINE"
 logger -p user.notice -t $LOG_TAG "ENC Called with '$0 $*' at $(date) on $(hostname)"
 
 declare -A PARAMETERS
-ENVIRONMENT="master"
+ENVIRONMENT=""
 CLASSES=""
 
 
@@ -53,7 +53,9 @@ echo -e "---\nclasses:";
 for aClass in $CLASSES; do 
 	echo "  - $aClass"; 
 done
-echo "environment: $ENVIRONMENT"
+if [ -n "$ENVIRONMENT" ]; then
+	echo "environment: $ENVIRONMENT"
+fi
 echo "parameters:"
 for i in "${!PARAMETERS[@]}"; do 
 	echo "  $i: ${PARAMETERS[$i]}"
