@@ -1,0 +1,5 @@
+b ---
+classes:
+  - my_motd
+
+my_motd::enabled: true

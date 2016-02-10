@@ -1,0 +1,20 @@
+---
+classes: 
+  - my_webserver
+
+apache::default_vhost: false
+
+my_webserver::my_vhosts:
+  "webmail.webserver.vagrant.local":
+    priority: "10"
+    port: "80"
+    docroot: "/var/www/webmail"
+  "blog.webserver.vagrant.local":
+    priority: "10"
+    port: "80"
+    docroot: "/var/www/blog"
+  "www.webserver.vagrant.local":
+    priority: "10"
+    port: "80"
+    docroot: "/var/www/html/"
+
